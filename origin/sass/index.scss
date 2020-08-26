@@ -26,6 +26,11 @@ a {
     background-size: 100% 100%;
 }
 
+.log-f {
+    display: flex;
+    justify-content: space-between;
+}
+
 .header {
     a {
         color: #ccc!important;
@@ -114,6 +119,7 @@ a {
                 height: 442px;
             }
             ul {
+                position: absolute;
                 width: 40000px;
                 li {
                     float: left;
