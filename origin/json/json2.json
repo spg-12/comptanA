@@ -1,0 +1,346 @@
+{
+    "code": 200,
+    "msg": "success",
+    "data": {
+        "need_address_check": true,
+        "commodity_ids": [
+            1191800007
+        ],
+        "goods_ids": [
+            2191800007
+        ],
+        "goods_list": [{
+            "goods_info": { "product_id": 9732, "commodity_id": 1191800007, "goods_id": 2191800007, "name": "米家飞行员太阳镜 Pro 椭圆框 渐变灰", "price": "199", "market_price": "199", "shipment_text": "", "address_type": "common", "buy_limit": 50, "is_sale": true, "is_stock": true, "img_800_pms": null, "img_800_custom": null, "imgs": ["https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1556533073.62795224.jpg", "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1556533073.54976539.jpg", "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1556533073.55238414.jpg", "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1556533073.28089514.jpg", "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1556533073.55023638.jpg"], "img_url": "//cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1556533073.62795224.jpg", "img_url_webp": "//cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1556533073.62795224.jpg", "action_button": { "sale_mode": "standard", "button_title": "加入购物车", "is_bigtap": false, "use_occ": false, "occ_timeout": 5000, "bigtap_source": "bigtap", "mode_change_time": 0, "mode_start_time": 1557417600, "mode_end_time": 0, "sale_mode_title": "立即购买", "top_title": "", "sale_mode_line": "first", "source": "common", "recommend_product": {}, "standard": [] }, "onsale_action_button": null, "next_onsale_action_button": null, "prop_list": [{ "prop_cfg_id": 33, "prop_value_id": 289 }, { "prop_cfg_id": 2, "prop_value_id": 5 }], "page_id": 9422, "class_parameters": { "name": "关键参数" }, "gallery_v3": [{ "type": "img", "img_url": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/7193f4e9426ac57ece5fdba1bf0fbbe6.jpg", "img_url_webp": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/7193f4e9426ac57ece5fdba1bf0fbbe6.jpg?f=webp" }, { "type": "img", "img_url": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/090f551b4c17c7033330745e5a5c18af.jpg", "img_url_webp": "http://i8.mifile.cn/v1/a1/7410d182-5bf5-c835-9e42-dffb12993813.webp" }, { "type": "img", "img_url": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/beaa1367ca0fcbd34a3be255d19199e1.jpg", "img_url_webp": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/beaa1367ca0fcbd34a3be255d19199e1.jpg" }, { "type": "img", "img_url": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ee948f85198303a107c666371af4a2a5.jpg", "img_url_webp": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ee948f85198303a107c666371af4a2a5.jpg" }, { "type": "img", "img_url": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/b852c0d44bf0a24138ac18d0fdcde7b2.jpg", "img_url_webp": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/b852c0d44bf0a24138ac18d0fdcde7b2.jpg" }, { "type": "img", "img_url": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/68bbc0fb37d21ed3001673a1b5c4dd17.jpg", "img_url_webp": "http://i8.mifile.cn/v1/a1/914917fb-5f52-aefa-0db6-c0783694b10c.webp" }], "is_customize": "N", "customize_template_id": 0, "ext_buy_option": [] },
+            "after_sale_info": {
+                "list": [{
+                        "title": "小米自营",
+                        "is_check": true,
+                        "is_page_show": true,
+                        "mark": "type",
+                        "business_type": 1
+                    },
+                    {
+                        "title": "小米发货",
+                        "desc": "由小米发货",
+                        "is_check": true,
+                        "is_page_show": true,
+                        "mark": "sendout",
+                        "business_type": 1
+                    },
+                    {
+                        "title": "7天无理由退货",
+                        "is_check": true,
+                        "is_page_show": true,
+                        "mark": "return",
+                        "business_type": 1
+                    },
+                    {
+                        "title": "运费说明",
+                        "desc": "由小米发货商品(不含有品),单笔满99元免运费;\n由小米有品发货的商品,免运费;\n由第三方商家发货的商品，运费以实际结算金额为准;\n特殊商品需要单独收取运费,具体以实际结算金额为准;优惠券等不能抵扣运费金额;如需无理由退货,用户将承担该商品的退货物流费用;",
+                        "is_check": true,
+                        "is_page_show": false,
+                        "mark": "freight",
+                        "business_type": 1
+                    },
+                    {
+                        "title": "企业信息",
+                        "desc": "企业名称：小米通讯技术有限公司\n企业执照注册号：91110108558521630L\n企业地址：北京市海淀区西二旗中路33号院6 号楼9层019号\n企业电话：400-100-5678\n营业期限：2010年08月25日 至 2040年08月24日\n经营范围：开发手机技术、计算机软件及信息技术；技术检测、技术咨询、技术服务、技术转让；计算机技术培训；系统集成；货物进出口、技术进出口、代理进出口；家用电器、通信设备、广播电视设备（不含卫星电视广播、地面接收装置）、机械设备、电子产品、文化用品的批发零售；维修仪器仪表；销售医疗器械I类、II、III类、针纺织品（含家纺家饰）、服装鞋帽、日用杂货、工艺品、文化用品、体育用品、照相器材、卫生用品（含个人护理用品）、钟表眼镜、箱包、家具（不从事实体店铺经营）、小饰品、日用品、乐器、自行车、智能卡；计算机、通讯设备、家用电器、电子产品、机械设备的技术开发、技术服务；销售金银饰品（不含金银质地纪念币）；家用空调的委托生产；委托生产翻译机；销售翻译机、五金交电（不含电动自行车）、厨房用品、陶瓷制品、玻璃制品、玩具、汽车零配件、食用农产品、花卉、苗木、宠物用品、建筑材料、装饰材料、化妆品、珠宝首饰、通讯设备、卫生间用品、农药；生产手机（仅限在海淀区永捷北路2号三层生产及外埠生产）；出版物批发；出版物零售；销售食品。（销售第三类医疗器械以及销售食品以及依法须经批准的项目，经相关部门批准后依批准的内容开展经营活动。）",
+                        "is_check": true,
+                        "is_page_show": false,
+                        "mark": "company",
+                        "business_type": 1
+                    },
+                    {
+                        "title": "售后服务政策",
+                        "is_check": true,
+                        "is_page_show": false,
+                        "url": "https://m.mi.com/aftersale/policy/3",
+                        "mark": "policy",
+                        "business_type": 1
+                    },
+                    {
+                        "title": "7天价格保护",
+                        "is_check": true,
+                        "is_page_show": false,
+                        "url": "https://s1.mi.com/m/faq/giving/index.html?project_id=44",
+                        "mark": "protect_price",
+                        "business_type": 1
+                    }
+                ],
+                "company_info": {
+                    "name": "小米自营",
+                    "business_type": 1,
+                    "desc": {
+                        "title": "企业信息",
+                        "desc": "企业名称：小米通讯技术有限公司\n企业执照注册号：91110108558521630L\n企业地址：北京市海淀区西二旗中路33号院6 号楼9层019号\n企业电话：400-100-5678\n营业期限：2010年08月25日 至 2040年08月24日\n经营范围：开发手机技术、计算机软件及信息技术；技术检测、技术咨询、技术服务、技术转让；计算机技术培训；系统集成；货物进出口、技术进出口、代理进出口；家用电器、通信设备、广播电视设备（不含卫星电视广播、地面接收装置）、机械设备、电子产品、文化用品的批发零售；维修仪器仪表；销售医疗器械I类、II、III类、针纺织品（含家纺家饰）、服装鞋帽、日用杂货、工艺品、文化用品、体育用品、照相器材、卫生用品（含个人护理用品）、钟表眼镜、箱包、家具（不从事实体店铺经营）、小饰品、日用品、乐器、自行车、智能卡；计算机、通讯设备、家用电器、电子产品、机械设备的技术开发、技术服务；销售金银饰品（不含金银质地纪念币）；家用空调的委托生产；委托生产翻译机；销售翻译机、五金交电（不含电动自行车）、厨房用品、陶瓷制品、玻璃制品、玩具、汽车零配件、食用农产品、花卉、苗木、宠物用品、建筑材料、装饰材料、化妆品、珠宝首饰、通讯设备、卫生间用品、农药；生产手机（仅限在海淀区永捷北路2号三层生产及外埠生产）；出版物批发；出版物零售；销售食品。（销售第三类医疗器械以及销售食品以及依法须经批准的项目，经相关部门批准后依批准的内容开展经营活动。）",
+                        "is_check": true,
+                        "is_page_show": false,
+                        "mark": "company",
+                        "business_type": 1
+                    }
+                }
+            },
+            "service_list": null,
+            "multi_service": {
+                "first": null
+            }
+        }],
+        "product_info": { "product_id": 9732, "name": "米家飞行员太阳镜 Pro", "product_desc": "阻隔紫外线防眩光 / 1mm 超细镜腿 / 不锈钢超薄镜架 / 免螺丝一体结构", "is_enable": true, "is_batched": false, "activity_tips": {}, "price_tips": {}, "hidden_price_tips": {}, "page_id": 9422, "is_choose": true },
+        "buy_option": [
+            { "name": "眼镜框形状", "prop_cfg_id": 33, "list": [{ "prop_value_id": 289, "name": "椭圆框", "prop_desc": "", "icon_img": "", "icon_color": "", "is_stock": false, "price": "" }] },
+            { "name": "颜色", "prop_cfg_id": 2, "list": [{ "prop_value_id": 5, "name": "渐变灰", "prop_desc": "", "icon_img": "", "icon_color": "", "is_stock": false, "price": "" }] }
+        ],
+        "extend_info": {
+            "desc_tabs_view": [{
+                "name": "商品详情",
+                "show_type": "config",
+                "tab_content": [{
+                        "plain_view": {
+                            "h": 361,
+                            "img": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/e9dbf9b54c19614afda6e29b7822b510.jpg",
+                            "link_title": "",
+                            "link_url": "",
+                            "title": "",
+                            "w": 1226
+                        },
+                        "view_type": "plain_view"
+                    },
+                    {
+                        "plain_view": {
+                            "h": 589,
+                            "img": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/6ebebcaee51c1bed5478d1aedb270ab8.jpg",
+                            "link_title": "",
+                            "link_url": "",
+                            "title": "",
+                            "w": 1226
+                        },
+                        "view_type": "plain_view"
+                    },
+                    {
+                        "plain_view": {
+                            "h": 499,
+                            "img": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/283994a52b3b12685181e33d75071039.jpg",
+                            "link_title": "",
+                            "link_url": "",
+                            "title": "",
+                            "w": 1226
+                        },
+                        "view_type": "plain_view"
+                    },
+                    {
+                        "plain_view": {
+                            "h": 298,
+                            "img": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a0f63bf2e5fa616a18c2ec235f59632b.jpg",
+                            "link_title": "",
+                            "link_url": "",
+                            "title": "",
+                            "w": 1226
+                        },
+                        "view_type": "plain_view"
+                    },
+                    {
+                        "plain_view": {
+                            "h": 736,
+                            "img": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9fb5a7620da7439b1586a8db8b973b1e.jpg",
+                            "link_title": "",
+                            "link_url": "",
+                            "title": "",
+                            "w": 1226
+                        },
+                        "view_type": "plain_view"
+                    },
+                    {
+                        "plain_view": {
+                            "h": 357,
+                            "img": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0818312e20d97e90b0e0f8e9bed42a45.jpg",
+                            "link_title": "",
+                            "link_url": "",
+                            "title": "",
+                            "w": 1226
+                        },
+                        "view_type": "plain_view"
+                    },
+                    {
+                        "plain_view": {
+                            "h": 541,
+                            "img": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ff3b6a9195e90133f924fb60846bb254.jpg",
+                            "link_title": "",
+                            "link_url": "",
+                            "title": "",
+                            "w": 1226
+                        },
+                        "view_type": "plain_view"
+                    },
+                    {
+                        "plain_view": {
+                            "h": 670,
+                            "img": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/7b6a81fd986931a17dffd4f213b3d976.jpg",
+                            "link_title": "",
+                            "link_url": "",
+                            "title": "",
+                            "w": 1226
+                        },
+                        "view_type": "plain_view"
+                    },
+                    {
+                        "plain_view": {
+                            "h": 341,
+                            "img": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/45e4834780bd322a069d1cbdac4ed1fb.jpg",
+                            "link_title": "",
+                            "link_url": "",
+                            "title": "",
+                            "w": 1226
+                        },
+                        "view_type": "plain_view"
+                    },
+                    {
+                        "plain_view": {
+                            "h": 432,
+                            "img": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/25c7cf2c3293cfab197a16a6412f08e2.jpg",
+                            "link_title": "",
+                            "link_url": "",
+                            "title": "",
+                            "w": 1226
+                        },
+                        "view_type": "plain_view"
+                    },
+                    {
+                        "plain_view": {
+                            "h": 368,
+                            "img": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/c97eb515590bcaffc3140f8de89dd2ae.jpg",
+                            "link_title": "",
+                            "link_url": "",
+                            "title": "",
+                            "w": 1226
+                        },
+                        "view_type": "plain_view"
+                    },
+                    {
+                        "plain_view": {
+                            "h": 812,
+                            "img": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ffa55d516b26520edd50b304f5a9655d.jpg",
+                            "link_title": "",
+                            "link_url": "",
+                            "title": "",
+                            "w": 1226
+                        },
+                        "view_type": "plain_view"
+                    },
+                    {
+                        "plain_view": {
+                            "h": 544,
+                            "img": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/380c32e5610a3588d4bcf6e01620fe3d.jpg",
+                            "link_title": "",
+                            "link_url": "",
+                            "title": "",
+                            "w": 1226
+                        },
+                        "view_type": "plain_view"
+                    },
+                    {
+                        "plain_view": {
+                            "h": 248,
+                            "img": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/8f99221bdfd552ebe800c461578a8aa0.jpg",
+                            "link_title": "",
+                            "link_url": "",
+                            "title": "",
+                            "w": 1226
+                        },
+                        "view_type": "plain_view"
+                    },
+                    {
+                        "plain_view": {
+                            "h": 515,
+                            "img": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0a227aca0226227af1a59aac191e7fc8.jpg",
+                            "link_title": "",
+                            "link_url": "",
+                            "title": "",
+                            "w": 1226
+                        },
+                        "view_type": "plain_view"
+                    },
+                    {
+                        "plain_view": {
+                            "h": 356,
+                            "img": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/e58d4a44fb34e3b84e4c481e184d7476.jpg",
+                            "link_title": "",
+                            "link_url": "",
+                            "title": "",
+                            "w": 1226
+                        },
+                        "view_type": "plain_view"
+                    },
+                    {
+                        "plain_view": {
+                            "h": 432,
+                            "img": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/48ab549143876f164334137c3caf0975.jpg",
+                            "link_title": "",
+                            "link_url": "",
+                            "title": "",
+                            "w": 1226
+                        },
+                        "view_type": "plain_view"
+                    },
+                    {
+                        "plain_view": {
+                            "h": 428,
+                            "img": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d7ad7e37f5f864503c5e5eec7c797623.jpg",
+                            "link_title": "",
+                            "link_url": "",
+                            "title": "",
+                            "w": 1226
+                        },
+                        "view_type": "plain_view"
+                    },
+                    {
+                        "plain_view": {
+                            "h": 685,
+                            "img": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/e345c9fc4593fe3af6ace9b1d784b396.jpg",
+                            "link_title": "",
+                            "link_url": "",
+                            "title": "",
+                            "w": 1226
+                        },
+                        "view_type": "plain_view"
+                    },
+                    {
+                        "plain_view": {
+                            "h": 532,
+                            "img": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d1ce13e7092cdb3a3b037e29ca52de44.jpg",
+                            "link_title": "",
+                            "link_url": "",
+                            "title": "",
+                            "w": 1226
+                        },
+                        "view_type": "plain_view"
+                    },
+                    {
+                        "plain_view": {
+                            "h": 160,
+                            "img": "http://i8.mifile.cn/b2c-mimall-media/1a84b2b629512205bf528aae91361efb.jpg",
+                            "link_title": "",
+                            "link_url": "",
+                            "title": "官方微信",
+                            "w": 1226
+                        },
+                        "view_type": "plain_view"
+                    },
+                    {
+                        "plain_view": {
+                            "h": 189,
+                            "img": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a482afa34053b1b32ece1023475af7fb.jpeg",
+                            "link_title": "",
+                            "link_url": "",
+                            "title": "价格说明",
+                            "w": 1226
+                        },
+                        "view_type": "plain_view"
+                    }
+                ],
+                "view_type": "desc_tabs_view"
+            }],
+            "show_type": "config",
+            "view_type": "desc_tabs_view"
+        }
+    }
+}

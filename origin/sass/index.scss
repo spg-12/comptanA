@@ -212,3 +212,28 @@ a {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
+.foul {
+    display: flex;
+    li {
+        flex: 1;
+        text-align: center;
+    }
+}
+
+.footer {
+    .footer-c {
+        padding-top: 60px;
+        display: flex;
+        dl {
+            flex: 1;
+        }
+    }
+}
+
+.footer-f {
+    font-size: 12px;
+    .p111 {
+        text-align: center;
+    }
+}

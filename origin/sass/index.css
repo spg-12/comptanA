@@ -225,3 +225,29 @@ a {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+.foul {
+  display: flex;
+}
+
+.foul li {
+  flex: 1;
+  text-align: center;
+}
+
+.footer .footer-c {
+  padding-top: 60px;
+  display: flex;
+}
+
+.footer .footer-c dl {
+  flex: 1;
+}
+
+.footer-f {
+  font-size: 12px;
+}
+
+.footer-f .p111 {
+  text-align: center;
+}

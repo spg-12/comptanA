@@ -195,7 +195,7 @@
 
 
     <div class="center b" id="center">
-        <div class="ka-wrap">
+        <!-- <div class="ka-wrap">
             <div class="card bg-light ka" style="width: 16rem; ">
                 <img src="http://cdn.cnbj1.fds.api.mi-img.com/mi-mall/1f32af53d1ad60f4980146f6a2b81019.jpg?thumb=1&w=250&h=250&f=webp&q=90" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -224,21 +224,103 @@
                     <p class="card-text color-red">1200</p>
                 </div>
             </div>
-        </div>
+        </div> -->
 
-        <script>
-            ;
-            (function() {
-                var $box = $('#center');
-                $.get('http://10.3.147.88:3000/json/json1.json', {}, function(data) {
-                    console.log(data)
-                }, 'json');
-            })();
-        </script>
+
 
     </div>
-    <div id="footer" class="footer">
+    <script>
+        ;
+        (function() {
+            var $box = $('#center');
+            var box = document.querySelector('#center');
+            var num = 0;
+            $(window).scroll(function() {
+                var $this = $(this),
+                    viewH = $(this).height(), //可见高度
+                    contentH = $(document.body).height(), //内容高度
+                    scrollTop = $(this).scrollTop(); //滚动高度
+                // console.log(contentH - viewH);
+                // console.log(scrollTop);
+                if (contentH - viewH - scrollTop <= 30 && num < 70) {
 
+                    $.get('http://10.3.147.88:3000/json/json1.json', {}, function(data) {
+                        console.log(data);
+                        for (var i = 0; i < 2; i++) {
+                            var str = '';
+                            str += '<div class="ka-wrap">';
+                            for (var j = 0; j < 4; j++) {
+                                str += `<div class="card bg-light ka" style="width: 16rem; ">
+                            <img src="${data.data.list.list[num].img}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text yichu">${data.data.list.list[num].goods_name}</p>
+                                <p class="card-text color-red">${data.data.list.list[num].goods_price}</p>
+                            </div>
+                        </div>`;
+                                num++;
+                            }
+                            str += '</div>';
+                            box.innerHTML += str;
+                        };
+                    }, 'json');
+                }
+
+            });
+        })();
+    </script>
+    <div id="footer" class="footer b">
+        <ul class="list-group list-group-horizontal-lg foul">
+            <li class="list-group-item">预约维修服务</li>
+            <li class="list-group-item">7天无理由退货</li>
+            <li class="list-group-item">15天免费换货</li>
+            <li class="list-group-item">满99元包邮</li>
+            <li class="list-group-item">520余家售后网点</li>
+        </ul>
+        <div class="footer-c">
+            <dl>
+                <dt>帮助中心</dt>
+                <dd>账户管理</dd>
+                <dd>购物指南</dd>
+                <dd>订单操作</dd>
+            </dl>
+            <dl>
+                <dt>服务支持</dt>
+                <dd>售后政策</dd>
+                <dd>自助服务</dd>
+                <dd>相关下载</dd>
+            </dl>
+            <dl>
+                <dt>线下门店</dt>
+                <dd>小米之家</dd>
+                <dd>服务网点</dd>
+                <dd>授权体验店</dd>
+            </dl>
+            <dl>
+                <dt>关于小米</dt>
+                <dd>了解小米</dd>
+                <dd>加入小米</dd>
+                <dd>投资者关系</dd>
+            </dl>
+            <dl>
+                <dt>企业社会责任</dt>
+                <dd>廉洁举报</dd>
+                <dd>关注我们</dd>
+                <dd>新浪微博</dd>
+                <dd>官方微信</dd>
+                <dd>联系我们</dd>
+                <dd>公益基金会</dd>
+            </dl>
+        </div>
+        <div class="footer-f">
+            <p class="p111">小米商城 | MIUI | 米家 | 米聊 | 多看 | 游戏 | 政企服务 | 小米天猫店 | 小米集团隐私政策 | 小米公司儿童信息保护规则 | 小米商城隐私政策 | 小米商城用户协议 | 问题反馈 | Select Location</p>
+            <p>© mi.com 京ICP证110507号 京ICP备10046444号 京公网安备11010802020134号 京网文[2020]0276-042号 <br>（京）网械平台备字（2018）第00005号 互联网药品信息服务资格证 (京)-非经营性-2014-0090 营业执照 医疗器械质量公告 <br>增值电信业务许可证 网络食品经营备案 京食药网食备201810017 食品经营许可证 <br>违法和不良信息举报电话：171-5104-4404 知识产权侵权投诉 本网站所列数据，除特殊说明，所有数据均出自我司实验室测试</p>
+            <p>
+                <img src="http://i1.mifile.cn/f/i/17/site/truste.png" alt="">
+                <img src="http://s01.mifile.cn/i/v-logo-2.png" alt="">
+                <img src="http://s01.mifile.cn/i/v-logo-1.png" alt="">
+                <img src="http://i8.mifile.cn/b2c-mimall-media/ba10428a4f9495ac310fd0b5e0cf8370.png " alt="">
+            </p>
+        </div>
     </div>
 
 </body>
