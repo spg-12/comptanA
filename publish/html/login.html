@@ -1,1 +1,60 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Document</title><link rel="stylesheet" href="../resource/css/bootstrap.min.css"><link rel="stylesheet" href="../css/login.css"><script src="../resource/js/jquery.js"></script><style></style></head><body><div id="head-img" class="head-img banner"><h1 class="fl"><img src="http://misc.360buyimg.com/lib/img/e/logo-201305-b.png" alt=""></h1><b class="fl">欢迎登陆</b> <a href="http://www.baidu.com">登陆页面，调查问卷</a></div><form><div class="box"><div class="log">登录页</div><div class="form-group"><label for="exampleInputEmail1">用户名</label> <input type="text" class="form-control" id="username" aria-describedby="emailHelp"> <small id="emailHelp" class="form-text text-muted">你输入用户名不正确（已被使用，格式错误）</small></div><div class="form-group"><label for="exampleInputPassword1">密码</label> <input type="password" class="form-control" id="password"> <small id="emailHelp" class="form-text text-muted">你输入的密码有误</small></div><div class="d-flex justify-content-center align-items-center"><button type="button" class="btn btn-primary d-flex justify-content-center align-items-center">登录</button></div></div></form></body></html>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Document</title><link rel="stylesheet" href="../resource/css/bootstrap.min.css"><link rel="stylesheet" href="../css/login.css"><script src="../resource/js/jquery.js"></script><style></style></head><body><div id="head-img" class="head-img banner"><h1 class="fl"><img src="http://misc.360buyimg.com/lib/img/e/logo-201305-b.png" alt=""></h1><b class="fl">欢迎注册</b> <a href="#">已有账号，<span>请登录</span></a></div><div class="xian"></div><div class="form"><form class="wrapForm"><div class="box"><div class="log">注册</div><div class="form-group d-flex flex-row justify-content-sm-between"><label for="exampleInputEmail1">用户名:</label> <input type="text" style="width: 350px;" class="form-control" placeholder="4到16位（字母，数字，下划线，减号）" id="username" aria-describedby="emailHelp"></div><div class="userErr">你输入用户名不正确（已被使用，格式错误）</div><div class="form-group d-flex flex-row justify-content-sm-between"><label for="exampleInputPassword1">密码</label> <input style="width: 350px;" placeholder="输入6-18由字母开头的密码" type="password" class="form-control" id="password"><!-- <small id="emailHelp" class="form-text text-muted">你输入的密码有误</small> --></div><div class="passErr">你输入的密码有误</div><div class="d-flex justify-content-center align-items-center"><button style="width: 250px;" type="button" class="btn btn-primary d-flex justify-content-center align-items-center">注册账号</button></div></div></form></div><script>var $username = $('#username');
+        var $password = $('#password');
+        var $userErr = $('.userErr');
+        var $passErr = $('.passErr');
+        var $btn = $('.btn');
+        var userFlag = false;
+        var passFlag = false;
+
+        $username.blur(function() {
+
+            var userVal = $username.val();
+            var reg = /^[a-zA-Z0-9_-]{4,16}$/;
+            var is = reg.test(userVal);
+
+            if (is) {
+
+                userFlag = true;
+                $userErr.css('display', 'none');
+            } else {
+                userFlag = false;
+                $userErr.css('display', 'block');
+            }
+        });
+
+        $password.blur(function() {
+            var passVal = $password.val();
+            var reg = /^[0-9]{6,18}$/;
+            var is = reg.test(passVal);
+            if (is) {
+                passFlag = true;
+                $passErr.css('display', 'none');
+            } else {
+                passFlag = false;
+                $passErr.css('display', 'block');
+            }
+        });
+        $btn.click(function() {
+            if (passFlag && userFlag) {
+                $.ajax({
+                    url: 'http://localhost/lizihua/login.php',
+                    type: 'post',
+                    data: {
+                        username: $username.val(),
+                        password: $password.val()
+                    },
+                    dataType: 'json',
+                    success({
+                        err,
+                        data
+                    }) {
+                        if (!err) {
+                            location.href = 'http://10.3.147.73:3000/html/loginup.html';
+                        }
+                    }
+
+                })
+            }
+
+
+        });</script></body></html>

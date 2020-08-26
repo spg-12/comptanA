@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../resource/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/login.css">
-    <link rel="stylesheet" href="../sass/login.css">
+
     <script src="../resource/js/jquery.js"></script>
     <style>
 
@@ -29,7 +29,7 @@
                 </div>
                 <div class="form-group d-flex flex-row justify-content-sm-between">
                     <label for="exampleInputEmail1">用户名:</label>
-                    <input type="text" style="width: 350px;" class="form-control" placeholder="输入用户名不能用符号" id="username" aria-describedby="emailHelp">
+                    <input type="text" style="width: 350px;" class="form-control" placeholder="4到16位（字母，数字，下划线，减号）" id="username" aria-describedby="emailHelp">
 
                 </div>
                 <div class="userErr">
@@ -47,6 +47,68 @@
             </div>
         </form>
     </div>
+    <script>
+        var $username = $('#username');
+        var $password = $('#password');
+        var $userErr = $('.userErr');
+        var $passErr = $('.passErr');
+        var $btn = $('.btn');
+        var userFlag = false;
+        var passFlag = false;
+
+        $username.blur(function() {
+
+            var userVal = $username.val();
+            var reg = /^[a-zA-Z0-9_-]{4,16}$/;
+            var is = reg.test(userVal);
+
+            if (is) {
+
+                userFlag = true;
+                $userErr.css('display', 'none');
+            } else {
+                userFlag = false;
+                $userErr.css('display', 'block');
+            }
+        });
+
+        $password.blur(function() {
+            var passVal = $password.val();
+            var reg = /^[0-9]{6,18}$/;
+            var is = reg.test(passVal);
+            if (is) {
+                passFlag = true;
+                $passErr.css('display', 'none');
+            } else {
+                passFlag = false;
+                $passErr.css('display', 'block');
+            }
+        });
+        $btn.click(function() {
+            if (passFlag && userFlag) {
+                $.ajax({
+                    url: 'http://localhost/lizihua/login.php',
+                    type: 'post',
+                    data: {
+                        username: $username.val(),
+                        password: $password.val()
+                    },
+                    dataType: 'json',
+                    success({
+                        err,
+                        data
+                    }) {
+                        if (!err) {
+                            location.href = 'http://10.3.147.73:3000/html/loginup.html';
+                        }
+                    }
+
+                })
+            }
+
+
+        });
+    </script>
 </body>
 
 </html>

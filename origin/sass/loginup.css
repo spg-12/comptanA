@@ -92,7 +92,8 @@ a {
 }
 
 .text-muted {
-  color: red;
+  color: red !important;
+  display: none;
 }
 
 .footer {

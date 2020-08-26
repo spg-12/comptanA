@@ -80,7 +80,7 @@ a {
 .userErr,
 .passErr {
     position: absolute;
-    color: red;
+    color: red!important;
     left: 70px;
     display: none;
 }
