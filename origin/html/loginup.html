@@ -98,7 +98,8 @@
 
                     } else {
                         $passErr.css('display', 'none');
-                        location.href = 'http://www.baidu.com';
+                        document.cookie = 'isLogin=1;max-age=' + 1000 * 60 * 60;
+                        location.href = 'http://localhost:3001/html/index.html';
                     }
                 }
             });

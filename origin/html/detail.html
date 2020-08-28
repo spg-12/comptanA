@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="../sass/detail.css"> -->
+    <link rel="stylesheet" href="../css/detail.css">
+    <link rel="stylesheet" href="../resource/css/bootstrap.min.css">
+    <script src="../resource/js/jquery.js"></script>
+</head>
+
+<body>
+    <script>
+        function getCookie(key) {
+            var arr = document.cookie.split('=');
+            if (arr[0] === key) {
+                return arr[1];
+            }
+        }
+        var isCookie = getCookie('isLogin');
+        if (!isCookie) {
+            location.href = 'http://localhost:3001/html/loginup.html';
+        }
+    </script>
+    <div id="header" class="header bg-dark">
+        <div class="header-k bg-dark">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light bg-dark text-reset " style="height: 40px;">
+                <a class="navbar-brand" href="#">京东商城</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse log-f" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">mul <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">云服务</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">金融</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">小爱开放平台</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">手机商城</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://localhost:3001/html/loginup.html">登录</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://localhost:3001/html/login.html">注册</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://localhost:3001/html/gouwuche.html">购物车</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+
+    </div>
+    <div class="search bg-light">
+        <div class="search-k">
+            <nav class=" navbar navbar-expand-lg navbar-light bg-light bg-light" style="height: 88px;">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                    <ul id="nav-li" class=" navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">红米手机 <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">电视</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">笔记本</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">电视机</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">小米手机</a>
+                        </li>
+
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
+
+        </div>
+        <div class="display-11">
+            <div class="ner ">
+
+            </div>
+
+        </div>
+    </div>
+    <script>
+        var $display11 = $('.display-11');
+
+        var $navLi = $('#nav-li li');
+        $navLi.each(function(index, value) {
+
+            $(value).mouseover(function() {
+                $.get('http://localhost:3001/json/json1.json', {}, function(data) {
+                    // console.log(data.data.list.list[index].goods_name);
+                    // console.log(data.data.list.list[index].goods_price);
+                    // console.log(data.data.list.list[index].img);
+                    $display11.html('');
+                    var str = '';
+                    str += '<div class="ner ">';
+
+                    for (var i = 0; i < 4; i++) {
+                        str += `<div class='box'>
+                    <img src="${data.data.list.list[i+index].img}" class="" alt="...">
+                    <div class="box2">
+                        <p class="box-p">${data.data.list.list[i+index].goods_name}</p>
+                        <p class="box-p2">${data.data.list.list[i+index].goods_price}</p>
+                    </div>
+                </div>`;
+                    }
+                    str += '</div>';
+                    $display11.html(str);
+                    $display11.show();
+                }, 'json');
+
+            });
+            // $(value).mouseout(function() {
+            //     $display11.hide();
+            // });
+
+        });
+        $display11.mouseout(function() {
+            $display11.hide();
+        });
+    </script>
+
+    <div id="titer" class='titer '>
+        <div class="titer-warp b">
+            <span id="tit">士大夫</span>
+            <a href="">合作</a>
+        </div>
+
+    </div>
+    <div class="concent b" id="concent">
+        <!-- <div class="con-left">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" style="height: 600px;">
+                    <div class="carousel-item active">
+                        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/7fdbd65118a53f86e9588c59416034a6.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+        </div>
+        <div class="con-right">
+            <div class="card mb-3" style="max-width: 600px; height: 600px; padding-left: 50px;">
+                <div class="row no-gutters" style="width: 100%; height: 100%;">
+                    <div class="col-md-8">
+                        <div class="card-body con-style">
+                            <h5 class="card-title">Card title</h5>
+                            <p>dfsdf</p>
+                            <p>sdfsd</p>
+                            <p>123</p>
+
+                            <h4>选择版本</h4>
+                            <P>
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label style="width: 150px;" class="bg-warning btn btn-secondary active">
+                                    <input class="" type="radio" name="options" id="option1" checked> 大
+                                </label>
+                                    <label style="width: 100px;" class="bg-success btn btn-secondary">
+                                    <input  class="" type="radio" name="options" id="option2"> 中
+                                </label>
+                                    <label class="btn btn-secondary">
+                                    <input type="radio" name="options" id="option3"> 小
+                                </label>
+                                </div>
+                            </P>
+                            <p class="card-text">
+                                <span>sdfs</span>
+                                <span>sdfsddf</span>
+                            </p>
+                            <p class="card-text gou"><button type="button" class="btn btn-lg btn-primary" disabled>加入购物车</button>
+                                <button type="button" class="btn btn-secondary btn-lg" disabled>收藏</button></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+    <script src="../js/detail.js">
+    </script>
+
+    <div id="footer" class="footer b">
+        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/25fee709747d50b223eaac838d54ff84.jpg" alt="">
+        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/25fee709747d50b223eaac838d54ff84.jpg" alt="">
+        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/25fee709747d50b223eaac838d54ff84.jpg" alt="">
+    </div>
+    <script>
+        var $footer = $('#footer');
+        $.get('http://localhost:3001/json/json2.json', {}, function(data) {
+
+            var arr = data.data.extend_info.desc_tabs_view[0].tab_content;
+            var str = '';
+            arr.forEach(function(value, index) {
+                console.log(value.plain_view.img);
+                str += ` <img src="${value.plain_view.img}" alt="">`;
+            })
+            $footer.html(str);
+
+
+        }, 'json');
+    </script>
+</body>
+
+</html>

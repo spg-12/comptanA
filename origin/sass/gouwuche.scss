@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.b {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: #ccc;
+}
+
+.header {
+    height: 100px;
+    border-bottom: 2px solid orangered;
+    .h-wrap {
+        display: flex;
+        justify-content: space-between;
+        height: 98px;
+        line-height: 98px;
+        div {
+            height: 100%;
+            width: 250px;
+        }
+        .h-left {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            a {
+                display: block;
+                width: 49px;
+                height: 49px;
+                background: url(http://s02.mifile.cn/assets/static/image/mi-logo.png) orange;
+            }
+            span {
+                font-size: 30px;
+            }
+        }
+        .h-right {
+            padding-right: 20px;
+            text-align: right;
+            a {
+                color: #999;
+            }
+        }
+    }
+}
+
+.concent {
+    padding-bottom: 40px;
+    background: #f5f5f5;
+    .c-body {
+        // height: 400px;
+        .box1-w {
+            display: none;
+            position: relative;
+            height: 400px;
+            .box1 {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+                h5 {
+                    padding-top: 100px;
+                    font-size: 30px;
+                }
+            }
+        }
+        .box2 {
+            // display: none;
+            padding-top: 30px;
+            .area {
+                height: 150px;
+                display: flex;
+                background: white;
+                box-shadow: 1px 1px 3px #ccc;
+                align-items: center;
+                margin-bottom: 30px;
+                div:nth-child(1) {
+                    padding-left: 50px;
+                    flex: 1;
+                }
+                div:nth-child(2) {
+                    flex: 2;
+                    img {
+                        width: 100px;
+                        height: 100px;
+                    }
+                }
+                div:nth-child(3) {
+                    flex: 3;
+                    p:nth-child(3) {
+                        color: red;
+                    }
+                }
+                div:nth-child(4) {
+                    flex: 3;
+                    span {
+                        margin: 0 20px;
+                    }
+                }
+                div:nth-child(5) {
+                    padding-right: 50px;
+                    span {
+                        cursor: pointer;
+                    }
+                }
+            }
+            .box2-f {
+                text-align: right;
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+
+.foul {
+    display: flex;
+    li {
+        flex: 1;
+        text-align: center;
+    }
+}
+
+.footer {
+    .footer-c {
+        padding-top: 60px;
+        display: flex;
+        dl {
+            flex: 1;
+        }
+    }
+}
+
+.footer-f {
+    font-size: 12px;
+    .p111 {
+        text-align: center;
+    }
+}
+
+.payment {
+    display: none;
+    position: fixed;
+    top: 200px;
+    left: 50%;
+    margin-left: -150px;
+    width: 330px;
+    height: 300px;
+    background: pink;
+    border: 2px solid orange;
+    span {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}

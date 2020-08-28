@@ -1,0 +1,303 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Document</title><link rel="stylesheet" href="../css/gouwuche.css"><link rel="stylesheet" href="../resource/css/bootstrap.min.css"><script src="../resource/js/jquery.js"></script></head><body><div id="header" class="header"><div class="h-wrap b"><div class="h-left"><a href="#"></a> <span>我的购物车</span></div><div class="h-right"><a href="http://localhost:3001/html/loginup.html">登录</a> | <a href="http://localhost:3001/html/login.html">注册</a></div></div></div><div class="concent" id="concent"><div class="c-body b"><!--  未登录或空显示 --><div class="box1-w"><div class="box1"><div class="card mb-3" style="max-width: 1200px;"><div class="row no-gutters"><div class="col-md-5"><img src="https://cdn.cnbj1.fds.api.mi-img.com/staticsfile/cart/cart-empty.png" class="card-img" alt="..."></div><div class="col-md-6"><div class="card-body" style="height: 300px; width: 400px;"><h5 class="card-title">你的购物车是空的！！！</h5><p class="card-text">登录后将显示之前添加购车的内容</p><p class="card-text"><button id="b-login" type="button" class="btn btn-primary btn-lg">立即登录</button> <button type="button" id="b-list" class="btn btn-secondary btn-lg">马上选购</button></p></div></div></div></div></div></div><!-- 登录后显示的内容 --><div class="box2"><div class="custom-control custom-checkbox mr-sm-2"><input type="checkbox" class="custom-control-input" id="customControlAutosizing"> <label class="custom-control-label" for="customControlAutosizing">全选</label></div><div class="kk"><!-- <div class="area">
+                        <div>
+                            <input type="radio">
+                        </div>
+                        <div>
+                            <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/7fdbd65118a53f86e9588c59416034a6.jpg" alt="">
+                        </div>
+                        <div>
+                            <h5>sdfsdfsdfsdff</h5>
+                            <p>sdfsdfsdfs</p>
+                            <p>123456</p>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-primary btn-sm">&lt;</button>
+                            <span> 1 </span>
+                            <button type="button" class="btn btn-secondary btn-sm">&gt;</button>
+                        </div>
+                        <div>
+                            <span>删除</span>
+                        </div>
+                    </div>
+                </div> --></div><div class="box2-f"><span id="sum">总计：￥0</span> <button type="button" id="md" class="btn btn-warning">埋单</button></div></div></div><div id="footer" class="footer b"><ul class="list-group list-group-horizontal-lg foul"><li class="list-group-item">预约维修服务</li><li class="list-group-item">7天无理由退货</li><li class="list-group-item">15天免费换货</li><li class="list-group-item">满99元包邮</li><li class="list-group-item">520余家售后网点</li></ul><div class="footer-c"><dl><dt>帮助中心</dt><dd>账户管理</dd><dd>购物指南</dd><dd>订单操作</dd></dl><dl><dt>服务支持</dt><dd>售后政策</dd><dd>自助服务</dd><dd>相关下载</dd></dl><dl><dt>线下门店</dt><dd>小米之家</dd><dd>服务网点</dd><dd>授权体验店</dd></dl><dl><dt>关于小米</dt><dd>了解小米</dd><dd>加入小米</dd><dd>投资者关系</dd></dl><dl><dt>企业社会责任</dt><dd>廉洁举报</dd><dd>关注我们</dd><dd>新浪微博</dd><dd>官方微信</dd><dd>联系我们</dd><dd>公益基金会</dd></dl></div><div class="footer-f"><p class="p111">小米商城 | MIUI | 米家 | 米聊 | 多看 | 游戏 | 政企服务 | 小米天猫店 | 小米集团隐私政策 | 小米公司儿童信息保护规则 | 小米商城隐私政策 | 小米商城用户协议 | 问题反馈 | Select Location</p><p>© mi.com 京ICP证110507号 京ICP备10046444号 京公网安备11010802020134号 京网文[2020]0276-042号<br>（京）网械平台备字（2018）第00005号 互联网药品信息服务资格证 (京)-非经营性-2014-0090 营业执照 医疗器械质量公告<br>增值电信业务许可证 网络食品经营备案 京食药网食备201810017 食品经营许可证<br>违法和不良信息举报电话：171-5104-4404 知识产权侵权投诉 本网站所列数据，除特殊说明，所有数据均出自我司实验室测试</p><p><img src="http://i1.mifile.cn/f/i/17/site/truste.png" alt=""> <img src="http://s01.mifile.cn/i/v-logo-2.png" alt=""> <img src="http://s01.mifile.cn/i/v-logo-1.png" alt=""> <img src="http://i8.mifile.cn/b2c-mimall-media/ba10428a4f9495ac310fd0b5e0cf8370.png" alt=""></p></div></div><!-- 收款码 --><div id="payment" class="payment"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1598626856766&di=d7c033b3c3cf2243d0cfd74c04805737&imgtype=0&src=http%3A%2F%2Fwww.vm7.com%2Fuploads%2Fallimg%2F191223%2F2-160202004Q2645.png" alt=""> <span id="pay-del">X</span></div><!--设置按钮链接 --><script>var $login = $('#b-login');
+            var $list = $('#b-list');
+            $login.click(function() {
+                location.href = 'http://localhost:3001/html/loginup.html';
+            });
+            $list.click(function() {
+                location.href = 'http://localhost:3001/html/index.html';
+            });
+
+            //设置埋单
+            var $md = $('#md');
+            $md.click(function() {
+                $('#payment').css('display', 'block');
+            });
+            $('#pay-del').click(function() {
+
+                $('#payment').css('display', 'none');
+            });</script><script>//获取cookie的函数
+            function getCookie(key) {
+                var arr = document.cookie.split('=');
+                if (arr[0] === key) {
+                    return arr[1];
+                }
+            }
+
+            //两个div元素
+            var $box1 = $('.box1-w');
+            var $box2 = $('.box2');
+            var a = JSON.parse(localStorage.getItem('a'));
+            var $kk = $('.kk');
+            var str = '';
+            if (a.length == 0 && getCookie('isLogin')) {
+                if (a.length == 0) {
+                    $box1.css('display', 'block');
+                    $box2.css('display', 'none');
+                } else {
+                    $box1.css('display', 'none');
+                    $box2.css('display', 'block');
+                }
+            }
+            for (var j = 0; j < a.length; j++) {
+                if (!a[j].jg) {
+                    a[j].jg = a[j].goods_price * 1;
+                }
+            };
+            localStorage.setItem('a', JSON.stringify(a));
+            // a.forEach(function(value, index) {
+            //     if (!value.jq) {
+            //         console.log(123);
+            //         value.jg = value.goods_price * 1;
+            //         //更行本地的存储
+            //         localStorage.setItem('a', JSON.stringify(a));
+            //     }
+
+            // });
+            var judge = a.every(function(value) {
+                return value.flag == true;
+            });
+            if (judge) {
+                $('#customControlAutosizing').attr('checked', 'checked');
+            }
+
+            function apply() {
+
+                $kk.html('');
+                var str = '';
+                for (var i = 0; i < a.length; i++) {
+
+                    a[i].id = i;
+
+                    str += `
+            <div class="area id${i}" >
+                        <div>
+                            <input ${a[i].flag?'checked':''} class='check' type="radio" data=${i}>
+                        </div>
+                        <div>
+                            <img src="${a[i].img}" alt="">
+                        </div>
+                        <div>
+                            <h5>${a[i].goods_name}</h5>
+                            <p>${a[i].desc}</p>
+                            <p id=p${i}>￥${a[i].jg}</p>
+                        </div>
+                        <div>
+                            <button type="button" id='btnLeft' data=${i}  class=" btn btn-primary btn-sm">&lt;</button>
+                            <span id='${i}'> ${a[i].num} </span>
+                            <button type="button" id='btnRight' data=${i} class="btn btn-secondary btn-sm">&gt;</button>
+                        </div>
+
+                        <div>
+                            <span class='del ' id=id${i}>删除</span>
+                        </div>
+
+                </div>
+            `;
+                }
+
+                $kk.html(str);
+            }
+            apply();
+
+
+
+
+
+            //设置总计
+            var sum = a.reduce(function(a, b, c, d) {
+                return a + b.jg;
+
+            }, 0);
+            $('#sum').html('总计：￥' + sum);
+            //设置按钮事件
+
+            //删除元素
+            var $box = $('.box2');
+            $box.on('click', '.del', function() {
+
+                // //获取自定义值找父元素
+                var c = $(this).attr('id');
+                // console.log(c.slice(2) * 1);
+                // //删除父元素
+                $(this).parents('.' + c).remove();
+                var d = c.slice(2) * 1;
+                // //删除对应的数组的数据
+                a.forEach(function(value, index) {
+                    if (value.id == d) {
+                        a.splice(index, 1);
+                    }
+                });
+                var sum = a.reduce(function(a, b, c, d) {
+                    return a + b.jg;
+
+                }, 0);
+
+                // apply();
+                // //判断购物车是否为零
+                if (a.length == 0) {
+                    if (a.length == 0) {
+                        $box1.css('display', 'block');
+                        $box2.css('display', 'none');
+                    } else {
+                        $box1.css('display', 'none');
+                        $box2.css('display', 'block');
+                    }
+                }
+                //总计格上树
+                $('#sum').html('总计：￥' + sum);
+                // //更行本地的存储
+                localStorage.setItem('a', JSON.stringify(a));
+
+            });
+
+            //加减按钮
+            // var $btnLeft = $('#btnLeft');
+            // var $btnRight = $('#btnRight');
+            $box.on('click', '#btnLeft', function() {
+
+                var id = $(this).attr('data');
+                var aaR = a.find(function(value, index) {
+                    return value.id == id;
+                });
+                console.log(aaR);
+                //判断计算器是否少于零
+                if (aaR.num <= 1) {
+                    return;
+                } else {
+                    aaR.num--;
+                }
+                var b = $(this).next();
+                $(b).html('' + aaR.num);
+                aaR.jg = aaR.num * aaR.goods_price;
+                $('#p' + id).html('￥' + aaR.jg);
+                var aaR = a.find(function(value, index) {
+                    return value.id == id;
+
+                });
+                if (aaR.flag) {
+                    var sum = a.reduce(function(a, b, c, d) {
+                        return a + b.jg;
+
+                    }, 0);
+                    $('#sum').html('总计：￥' + sum);
+                }
+                //更行本地的存储
+                localStorage.setItem('a', JSON.stringify(a));
+            });
+            $box.on('click', '#btnRight', function() {
+
+                var id = $(this).attr('data');
+                var aaR = a.find(function(value, index) {
+                    return value.id == id;
+                });
+                aaR.num++;
+                var b = $(this).prevUntil()[0];
+                $(b).html('' + aaR.num);
+
+                //更新价格
+                aaR.jg = aaR.num * aaR.goods_price;
+                $('#p' + id).html('￥' + aaR.jg);
+                // a[id].jg=a[id].num * a[id].goods_price;
+                console.log(a);
+
+                var aaR = a.find(function(value, index) {
+                    return value.id == id;
+
+                });
+                if (aaR.flag) {
+                    var sum = a.reduce(function(a, b, c, d) {
+                        return a + b.jg;
+
+                    }, 0);
+                    $('#sum').html('总计：￥' + sum);
+                }
+
+
+
+                //更行本地的存储
+                localStorage.setItem('a', JSON.stringify(a));
+            });
+
+            //设置全选
+            var $all = $('#customControlAutosizing');
+            $all.click(function() {
+                var b = $(this)[0].checked;
+                a.forEach(function(value, index) {
+                    value.flag = b;
+                });
+                console.log(a);
+                localStorage.setItem('a', JSON.stringify(a));
+                apply();
+                sumJ();
+            });
+
+            //设置单选按钮
+            $box.on('click', '.check', function() {
+                var id = $(this).attr('data');
+                var aaR = a.find(function(value, index) {
+                    return value.id == id;
+
+                });
+                if (aaR.flag) {
+                    aaR.flag = false;
+
+                    var judge = a.every(function(value) {
+                        return value.flag == true;
+                    });
+                    if (judge) {
+                        $('#customControlAutosizing').attr('checked', 'checked');
+                    } else {
+                        $('#customControlAutosizing').removeAttr('checked');
+                    }
+                    apply();
+                    sumJ();
+                } else {
+                    aaR.flag = true;
+
+                    var judge = a.every(function(value) {
+                        return value.flag == true;
+                    });
+                    if (judge) {
+                        $('#customControlAutosizing').attr('checked', 'checked');
+
+                    } else {
+                        $('#customControlAutosizing').removeAttr('checked');
+                    }
+                    sumJ();
+                    apply();
+                }
+            });
+
+            //设置总价格的函数
+            function sumJ() {
+                var isTrue = a.filter(function(value, index) {
+                    return value.flag == true;
+                });
+                var total = isTrue.reduce(function(a, b) {
+                    return a + b.jg;
+                }, 0);
+
+                $('#sum').html('总计：￥' + total);
+            }
+            sumJ();</script></div></body></html>
